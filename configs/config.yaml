@@ -1,0 +1,51 @@
+# =============================================================================
+# Forward Model Configuration for OCT Simulation
+# =============================================================================
+# This configuration file defines the physical and optical parameters for the forward
+# model used in differentiable OCT reconstruction. It specifies the imaging system
+# characteristics, scanning geometry, and post-processing parameters.
+#
+# The forward model simulates how light propagates through tissue and is detected
+# by the OCT system, including spectral characteristics, beam properties, and
+# signal processing steps.
+#
+# Usage: This file is loaded by Hydra and used throughout the OCT simulation pipeline.
+
+# ============================================================================
+# IMAGING SYSTEM PARAMETERS
+# ============================================================================
+
+forward_model_system:
+  central_wavelength_nm: 1300          #Central wavelength [nm]
+  numerical_aperture: 0.0315           #Objective numerical aperture (NA)
+
+  depth_samples: 500                   #Number of samples (pixels) along the depth axis
+  a_lines: 500                         #Number of A-lines per B-scan
+  confocal_correction: True            #Apply confocal correction to the signal ( [(z - zFP) / zR]^2 + 1)^(-1)
+  focal_plane_position_pixels: 231     # Focal plane position [pixels]
+  rayleigh_range_pixels: 131.5         #Rayleigh range [pixels]
+  
+  noise_floor_dB: 79.0                  #Noise floor threshold [dB] on 0-130 scale. Pixels below this get mu=0.
+  lateral_pixel_size_mm: 0.0093         #Lateral pixel size [mm] (9.3 micrometers in air)
+  axial_pixel_size_mm: 0.004           #Axial pixel size [mm] (5.4 micrometers in air / 1.33 refractive index of water)
+  
+  # Forward model type: 'ss' (single-scatter Beer-Lambert) or 'ms' (EHF multiple scattering)
+  forward_model_type: ss
+
+  # EHF multiple scattering parameters (only used when forward_model_type = 'ms')
+  g: 0.7                                 # HG anisotropy factor [0,1]. 0.7 typical for Intralipid @ 1.3um.
+  n_sample: 1.35                         # Sample refractive index. ~1.35 for Intralipid in agar.
+
+
+# Choose data term for optimization and comparisons: 'mse' or 'mae'
+loss: mse
+
+patient:
+  id: 02008Pre_0000_linear
+  frame: 166
+  prune_threshold_m_inv: 0.05
+
+# ROI selection method for masking tissue pixels during statistics computation.
+#   "roi"     — parallelogram ROI from phantom_roi.yaml (noise_floor + surface detection)
+#   "IntMask" — binary pixel mask from MATLAB IntMask.mat (ground-truth tissue segmentation)
+roi_selection_method: roi

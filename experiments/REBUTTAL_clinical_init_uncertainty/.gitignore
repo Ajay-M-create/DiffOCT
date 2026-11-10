@@ -1,0 +1,3 @@
+# Run outputs stay local; the staged copy lives in figures/data/figureS8_init_uncertainty/.
+/runs/
+__pycache__/

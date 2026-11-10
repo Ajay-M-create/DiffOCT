@@ -1,0 +1,120 @@
+{
+  "acquisition": "H",
+  "concentration_percent": 3.0,
+  "figure3_equivalent": {
+    "j": "liquid_3d_db_H_3pct_cfdepth225",
+    "k": "liquid_3d_mu_H_3pct_cfdepth225"
+  },
+  "pixel_size_mm": {
+    "dx": 0.009765625,
+    "dy": 0.009765625,
+    "dz": 0.00735294117647059
+  },
+  "dy_note": "Slow-axis spacing not exported; assumed equal to the exported lateral spacing",
+  "volume_shape_bscan_depth_aline": [
+    512,
+    500,
+    500
+  ],
+  "mask_rule": "Per A-line: original CF-window start <= depth < start + 225; intersect finite measured_db and mu_final; identical mask for both volumes. No comparison_mask or intensity-threshold filtering. Other voxels are set to the lower display limit (opacity 0); full depth coordinates kept.",
+  "depth_pixels": 225,
+  "depth_band_width_mm": 1.6544117647058827,
+  "mask_validation": {
+    "requested_depth_voxels": 57600000,
+    "retained_voxels": 57600000,
+    "excluded_nonfinite_voxels": 0,
+    "samples_per_aline_min": 225,
+    "samples_per_aline_max": 225
+  },
+  "drawn_fraction_of_volume": 0.45,
+  "db_clim": [
+    81.17578363700925,
+    127.68596649169922
+  ],
+  "db_clim_low_rule": "median over depth of 10*log10(noise) for this volume",
+  "mu_clim": [
+    0.0,
+    4.0
+  ],
+  "opacity_db": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "opacity_mu": [
+    0.0,
+    0.0,
+    0.5,
+    0.8,
+    1.0
+  ],
+  "cmap_db": "gray",
+  "cmap_mu": "viridis",
+  "style": "white background; bold titles above panels; colour bars as outlined strips in the box's bottom plane along its front edge (mu bar faded by its opacity ramp)",
+  "window_size": [
+    1600,
+    1600
+  ],
+  "camera": {
+    "azimuth": -50,
+    "elevation": 25,
+    "up": [
+      0,
+      0,
+      -1
+    ],
+    "view_angle": 30,
+    "distance": "2.2 x volume diagonal (src.visualization.setup_camera)"
+  },
+  "downsample": 1,
+  "diffoct_cf_window_mean_mm_inv": 2.212021603103457,
+  "cf_mean_mm_inv": 2.2946304125557675,
+  "outputs": [
+    "render_data_H_3pct_cfdepth225.npz",
+    "render_db_H_3pct_cfdepth225.png",
+    "liquid_3d_db_H_3pct_cfdepth225.pdf",
+    "liquid_3d_db_H_3pct_cfdepth225.jpeg",
+    "render_mu_H_3pct_cfdepth225.png",
+    "liquid_3d_mu_H_3pct_cfdepth225.pdf",
+    "liquid_3d_mu_H_3pct_cfdepth225.jpeg"
+  ],
+  "source_shards": [
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_000_063/plot_data.npz",
+      "sha256": "36901992fd47e26fa3177053ab746d0d7e89eaca79081f55173232d3635d31a0"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_064_127/plot_data.npz",
+      "sha256": "99f9edae4d13d74ba9b001d807a0aa177bf2aa975d0a57dfc885559392e7a932"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_128_191/plot_data.npz",
+      "sha256": "05e4a840cf0a07e9499fc6ac8bec525ed79a747ff995ce4caa9e89463d84bc50"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_192_255/plot_data.npz",
+      "sha256": "473ed61a16e6ee21197941f8fc5374e5255bdb20482c24bec1594ee0503015c9"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_256_319/plot_data.npz",
+      "sha256": "ed36eb541745228746bb58f80a73a1c64c8a2d09907f2ce7645648273752ae02"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_320_383/plot_data.npz",
+      "sha256": "cece8372cd31a99694034ee8faf450bef1e99ba6336fc2297a6c490e783a4d62"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_384_447/plot_data.npz",
+      "sha256": "4143c17aad03ee3ffec26a532397d608c07c10caab97aa65a69ca1acbee55ad9"
+    },
+    {
+      "path": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_3_448_511/plot_data.npz",
+      "sha256": "3ad567414b9ee7abfb498c822344d1124de447877f68c348f0ff4272bb04bc25"
+    }
+  ],
+  "script": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/render_3d_liquid.py",
+  "script_sha256": "4c45b74d64f5fbe23a12d953a57c2bc848eb7e9c89c2077040cbafc783604ea3",
+  "raw_npz_sha256": "877addcc54091938bad66e3fa0a2e2469fbc5a8516106c81ab1cdf610a67d376"
+}

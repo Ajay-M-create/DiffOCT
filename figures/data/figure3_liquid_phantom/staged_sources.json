@@ -1,0 +1,31 @@
+{
+  "note": "Copies staged for figures/figure_rebuttal_liquid_phantom.ipynb; sources are the production run (full-depth DiffOCT, fixed per-A-line CF gain, 15000 iterations).",
+  "files": {
+    "violin_frame_means.npz": {
+      "source": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/display_membership.npz",
+      "sha256": "3f26afb3c733b8d0ea19412249b1822a9b11b25df904fb4f0ad73716db68bbb4",
+      "source_sha256": "3f26afb3c733b8d0ea19412249b1822a9b11b25df904fb4f0ad73716db68bbb4"
+    },
+    "violin_regressions.csv": {
+      "source": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/regressions.csv",
+      "sha256": "181cf15b0e8ccb08eda8d29298005a7a940375e1e13e2a60b21fdb8b523e7863",
+      "source_sha256": "181cf15b0e8ccb08eda8d29298005a7a940375e1e13e2a60b21fdb8b523e7863"
+    },
+    "aline_signals_selected.npz": {
+      "source": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/post_diagnostics/selected_aline_signals.npz",
+      "sha256": "c8ac911ff561181062393e61d6cd3cb52a5d2b7734fed09f7f0235a5a7f2505f",
+      "source_sha256": "c8ac911ff561181062393e61d6cd3cb52a5d2b7734fed09f7f0235a5a7f2505f"
+    },
+    "aline_metrics_selected.csv": {
+      "source": "/home/gridsan/groups/erelab/Ajay/DiffOCT-rebuttal/experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/post_diagnostics/selected_alines.csv",
+      "sha256": "a9e017b7f720271c9f5e3a1280f52a7e930a1bffe107c717bca2837b33ca81b1",
+      "source_sha256": "a9e017b7f720271c9f5e3a1280f52a7e930a1bffe107c717bca2837b33ca81b1"
+    }
+  },
+  "contents": {
+    "violin_frame_means.npz": "python_volume (20), method (20: diffoct|cf), frame_values (20x512 frame means, mm^-1), retained (20x512 display filter: Tukey 1.5 IQR per group), python_bscan (512); volumes 0..9 = 0.5,1,1.5,2,3% x (H even, L odd)",
+    "violin_regressions.csv": "unfiltered regressions on five volume means per acquisition (H, L) and pooled H+L",
+    "aline_signals_selected.npz": "four user-selected A-lines at MATLAB frame 256 (rows: 1% H A-line 23, 3% H A-line 491, 2% L A-line 398, 3% L A-line 179); depth profiles of measured/predicted corrected dB, CF line, DiffOCT mu, CF mu, masks",
+    "aline_metrics_selected.csv": "per-A-line CF mu, DiffOCT window mean, CF and DiffOCT RMSE (dB)"
+  }
+}

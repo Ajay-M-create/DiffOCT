@@ -1,0 +1,23 @@
+# Raw acquisitions and experiment run outputs (large, supplied by the user)
+inputs/
+outputs/
+scripts/logs/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Notebook and OS leftovers
+.ipynb_checkpoints/
+.DS_Store
+
+# Large arrays over the GitHub file limit; regenerate with the experiment scripts
+figures/data/figure3_liquid_phantom/render_data_*.npz
+figures/data/figureS2_agar_phantom/
+figures/data/figureS5_ss_vs_ms/
+
+# Restricted clinical data (data use agreement)
+figures/data/figure5_clinical/
+
+# LaTeX and figure previews
+experiments/*/paper_preview/

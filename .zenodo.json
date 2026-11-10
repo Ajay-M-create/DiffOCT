@@ -1,0 +1,27 @@
+{
+  "title": "DiffOCT: Differentiable Inverse Rendering Recovers Intrinsic Properties from Intravascular OCT",
+  "upload_type": "software",
+  "description": "Code accompanying the paper \"Differentiable Inverse Rendering Recovers Intrinsic Properties from Intravascular OCT\". It implements a differentiable physics-based OCT forward model (single-scatter Beer-Lambert and multiple-scatter Extended Huygens-Fresnel) in PyTorch and recovers per-pixel optical attenuation and backscattering fraction from a single B-scan by gradient descent. Includes the experiment scripts and the notebooks that render main Figures 1 to 5 from cached data.",
+  "creators": [
+    {"name": "Manicka, Ajay"},
+    {"name": "Kadry, Karim"},
+    {"name": "Ruiz-Lopera, Sebastián"},
+    {"name": "Alsharqi, Maryam"},
+    {"name": "Arji, Sanjana"},
+    {"name": "Ruipérez-Campillo, Samuel"},
+    {"name": "Uribe-Patarroyo, Néstor"},
+    {"name": "Bouma, Brett E."},
+    {"name": "Nezami, Farhad"},
+    {"name": "Edelman, Elazer R."}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "optical coherence tomography",
+    "intravascular OCT",
+    "differentiable rendering",
+    "inverse problems",
+    "optical attenuation coefficient",
+    "PyTorch"
+  ]
+}

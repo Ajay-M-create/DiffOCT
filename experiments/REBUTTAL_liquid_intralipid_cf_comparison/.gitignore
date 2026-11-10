@@ -1,0 +1,6 @@
+# Future experiment outputs stay local to this directory.
+/cache/
+/runs/
+/tmp/
+__pycache__/
+*.pyc

@@ -1,0 +1,7 @@
+{
+  "phase": "random_pixel",
+  "phantom_idx": 0,
+  "mape": 0.14630210353061557,
+  "mae": 0.00741448812186718,
+  "gain_dB_frozen": 116.43388366699219
+}

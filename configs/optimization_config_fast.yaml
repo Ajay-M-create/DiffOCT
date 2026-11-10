@@ -1,0 +1,45 @@
+# =============================================================================
+# Optimization Configuration for Fast GPU-Accelerated Diff-OCT Reconstruction
+# =============================================================================
+# This configuration file controls the optimization parameters for the fast
+# GPU-accelerated version (test_8). It has increased update limits to allow
+# larger mu value changes per iteration.
+
+
+optimization:
+  # ============================================================================
+  # OPTIMIZER SETTINGS
+  # ============================================================================
+  learning_rate: 1e-3           # Adam optimizer step size (shared by mu and alpha)
+  num_iterations: 15000              # Total number of optimization iterations
+  panel_save_interval: 5000          # Save a 4-panel diagnostic image every N iterations (1 = every iter)
+  loss_scale: 1.0e+3              # Loss scale (normalized MSE is O(1e-2), so 1e3 gives gradients ~O(10))
+
+  # ============================================================================
+  # LEARNING RATE SCHEDULE
+  # ============================================================================
+  lr_scheduler: 'cosine'        # 'cosine' for CosineAnnealingLR, 'none' for constant lr
+  lr_min_factor: 0.01             # Minimum lr = learning_rate * lr_min_factor (for cosine schedule)
+  
+  # ============================================================================
+  # MU VALUE CONSTRAINTS (attenuation coefficient)
+  # ============================================================================
+  mu_min_mm_inv: 1e-2                  # Physical lower bound on μ (mm^-1)
+  mu_max_mm_inv: 20.0                 # Physical upper bound on μ (mm^-1)
+
+  # ============================================================================
+  # ALPHA VALUE CONSTRAINTS (backscattering fraction, unitless)
+  # ============================================================================
+  alpha_min: 1.0                # Physical lower bound on α (backscattering fraction)
+  alpha_max: 1.0                # Physical upper bound on α (backscattering fraction)
+  
+  # Maximum change in μ per iteration (mm^-1)
+  max_delta_mu_mm: 1.0             # Per-iteration cap on μ change (prevents overshooting)
+
+  # ============================================================================
+  # TOTAL VARIATION REGULARIZATION (spatial smoothness of μ)
+  # ============================================================================
+  mu_tv_weight: 1.0e+3              # Weight for anisotropic TV on μ; 0 = disabled.
+  gain_dB: auto                     # System gain in dB; 'auto' = per-frame median-matching, or a number for fixed.
+                                   # Encourages spatially homogeneous μ (useful for despeckled phantoms).
+

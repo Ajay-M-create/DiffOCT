@@ -1,0 +1,174 @@
+{
+  "25": {
+    "Adam": {
+      "seed_time_ms": [
+        0.9792379487480501
+      ],
+      "seed_mape": [
+        0.04115363990422338
+      ],
+      "seed_fwd_evals": [
+        20000
+      ],
+      "seed_wall_sec": [
+        19.584758974961005
+      ],
+      "seed_ms_per_fwd": [
+        0.9792379487480501
+      ],
+      "seed_peak_mem_mb": [
+        0.03466796875
+      ],
+      "avg_time_ms": 0.9792379487480501,
+      "avg_mape": 0.04115363990422338,
+      "avg_fwd_evals": 20000.0,
+      "avg_wall_sec": 19.584758974961005,
+      "avg_ms_per_fwd": 0.9792379487480501,
+      "avg_peak_mem_mb": 0.03466796875,
+      "std_time_ms": 0.0,
+      "std_mape": 0.0,
+      "std_fwd_evals": 0.0,
+      "std_wall_sec": 0.0,
+      "std_ms_per_fwd": 0.0,
+      "std_peak_mem_mb": 0.0,
+      "seeds_present": [
+        5
+      ]
+    },
+    "L-BFGS": {
+      "seed_time_ms": [
+        0.9101121065517267
+      ],
+      "seed_mape": [
+        0.04095555923413485
+      ],
+      "seed_fwd_evals": [
+        75
+      ],
+      "seed_wall_sec": [
+        0.0682584079913795
+      ],
+      "seed_ms_per_fwd": [
+        0.9101121065517267
+      ],
+      "seed_peak_mem_mb": [
+        0.03076171875
+      ],
+      "avg_time_ms": 0.9101121065517267,
+      "avg_mape": 0.04095555923413485,
+      "avg_fwd_evals": 75.0,
+      "avg_wall_sec": 0.0682584079913795,
+      "avg_ms_per_fwd": 0.9101121065517267,
+      "avg_peak_mem_mb": 0.03076171875,
+      "std_time_ms": 0.0,
+      "std_mape": 0.0,
+      "std_fwd_evals": 0.0,
+      "std_wall_sec": 0.0,
+      "std_ms_per_fwd": 0.0,
+      "std_peak_mem_mb": 0.0,
+      "seeds_present": [
+        5
+      ]
+    },
+    "Random Search": {
+      "seed_time_ms": [
+        0.15205382029816975
+      ],
+      "seed_mape": [
+        0.031101441709324718
+      ],
+      "seed_fwd_evals": [
+        9312
+      ],
+      "seed_wall_sec": [
+        3.041076405963395
+      ],
+      "seed_ms_per_fwd": [
+        0.3265760745235604
+      ],
+      "seed_peak_mem_mb": [
+        0.03759765625
+      ],
+      "avg_time_ms": 0.15205382029816975,
+      "avg_mape": 0.031101441709324718,
+      "avg_fwd_evals": 9312.0,
+      "avg_wall_sec": 3.041076405963395,
+      "avg_ms_per_fwd": 0.3265760745235604,
+      "avg_peak_mem_mb": 0.03759765625,
+      "std_time_ms": 0.0,
+      "std_mape": 0.0,
+      "std_fwd_evals": 0.0,
+      "std_wall_sec": 0.0,
+      "std_ms_per_fwd": 0.0,
+      "std_peak_mem_mb": 0.0,
+      "seeds_present": [
+        5
+      ]
+    },
+    "CMA-ES": {
+      "seed_time_ms": [
+        0.41969140995431514
+      ],
+      "seed_mape": [
+        0.04108893917873502
+      ],
+      "seed_fwd_evals": [
+        6630
+      ],
+      "seed_wall_sec": [
+        2.7825540479971096
+      ],
+      "seed_ms_per_fwd": [
+        0.41969140995431514
+      ],
+      "seed_peak_mem_mb": [
+        0.02783203125
+      ],
+      "avg_time_ms": 0.41969140995431514,
+      "avg_mape": 0.04108893917873502,
+      "avg_fwd_evals": 6630.0,
+      "avg_wall_sec": 2.7825540479971096,
+      "avg_ms_per_fwd": 0.41969140995431514,
+      "avg_peak_mem_mb": 0.02783203125,
+      "std_time_ms": 0.0,
+      "std_mape": 0.0,
+      "std_fwd_evals": 0.0,
+      "std_wall_sec": 0.0,
+      "std_ms_per_fwd": 0.0,
+      "std_peak_mem_mb": 0.0,
+      "seeds_present": [
+        5
+      ]
+    },
+    "_meta": {
+      "n_pixels": 25,
+      "n_alines": 1,
+      "f": 0.625,
+      "depth_samples": 312,
+      "axial_pixel_size_mm": 0.0064,
+      "n_params": 25,
+      "n_params_above_floor": 25,
+      "n_array_pixels": 312,
+      "gain_dB": 116.59726905822754,
+      "alpha": 0.0028161440178275433,
+      "optical_thickness": 0.8082882690429688
+    }
+  },
+  "_provenance": {
+    "host": "d-7-13-1",
+    "platform": "Linux-6.1.186-llgrid-x86_64-with-glibc2.39",
+    "python": "3.9.22",
+    "torch": "2.4.0+cu121",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "cma": "3.3.0",
+    "gpu": "Tesla V100-PCIE-32GB",
+    "cuda": "12.1",
+    "cudnn": 90100,
+    "num_seeds": 8,
+    "num_iters": 20000,
+    "clock": "time.perf_counter (monotonic)",
+    "cuda_sync": "torch.cuda.synchronize() before and after each timed region; one untimed warmup forward per run",
+    "peak_mem_protocol": "torch.cuda.reset_peak_memory_stats() before t_start; max_memory_allocated() at end"
+  }
+}

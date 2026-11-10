@@ -1,0 +1,39 @@
+{
+  "central_wavelength_nm": 1300,
+  "full_bandwidth_nm": 95,
+  "half_bandwidth_nm": 47.5,
+  "experimental_NA_approx": 0.05,
+  "experimental_beam_diameter_mm": 3.6,
+  "specification_source": "User supplied SLZ1301, 1300 nm, 95 nm full bandwidth; corrected experimental NA about 0.05 with 3.6 mm beam.",
+  "exported_NA_incorrect_per_user": 0.02692193235832656,
+  "optimization_zR_px": 58.68257158581024,
+  "optimization_zR_mm": 0.4314894969544871,
+  "zFP_by_acquisition": {
+    "H": {
+      "min_px": 190.15475657360338,
+      "max_px": 218.71473587793162,
+      "mean_px": 201.387395589563
+    },
+    "L": {
+      "min_px": 116.07253700886783,
+      "max_px": 152.6195006332548,
+      "mean_px": 130.40180325324565
+    }
+  },
+  "zFP_coordinates": "Exported MATLAB-style depth coordinates; confocal evaluated at z=1..500; varies by B-scan.",
+  "noise_floor_mean_power_db": 81.2621697810443,
+  "noise_floor_mean_db": 81.24499692353689,
+  "noise_floor_range_db": [
+    80.83216694027061,
+    82.25102135906656
+  ],
+  "noise_average_definition": "10*log10(mean(nosiefloor)); equal weighting across 500 depths and ten production volumes (0.5, 1, 1.5, 2, 3 percent; H and L).",
+  "axial_pixel_size_water_um": 7.35294117647059,
+  "lateral_pixel_size_um": 9.765625,
+  "calibration_source": "inputs/LiquidIntralipidPhantoms_20260915/CF_Method_Outputs.mat",
+  "production_run": "experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z",
+  "verified_saved_calibration_shards": [
+    "experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/H_0p5_000_063",
+    "experiments/REBUTTAL_liquid_intralipid_cf_comparison/runs/production_HL_full_depth_cf_gain_20260928T175833Z/shards/L_0p5_000_063"
+  ]
+}

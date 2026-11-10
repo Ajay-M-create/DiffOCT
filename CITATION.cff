@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "DiffOCT: Differentiable Inverse Rendering Recovers Intrinsic Properties from Intravascular OCT"
+type: software
+license: MIT
+repository-code: "https://github.com/Ajay-M-create/DiffOCT"
+version: "1.0.1"
+date-released: "2026-11-10"
+authors:
+  - family-names: Manicka
+    given-names: Ajay
+  - family-names: Kadry
+    given-names: Karim
+  - family-names: Ruiz-Lopera
+    given-names: Sebastián
+  - family-names: Alsharqi
+    given-names: Maryam
+  - family-names: Arji
+    given-names: Sanjana
+  - family-names: Ruipérez-Campillo
+    given-names: Samuel
+  - family-names: Uribe-Patarroyo
+    given-names: Néstor
+  - family-names: Bouma
+    given-names: Brett E.
+  - family-names: Nezami
+    given-names: Farhad
+  - family-names: Edelman
+    given-names: Elazer R.
+keywords:
+  - optical coherence tomography
+  - intravascular OCT
+  - differentiable rendering
+  - inverse problems

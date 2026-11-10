@@ -1,0 +1,74 @@
+# =============================================================================
+# Scatterer Configuration for Physical Intralipid Phantom Experiments
+# =============================================================================
+# Scatterer maps for OCT simulation matching the physical phantom dataset:
+# - 500 depth samples × 500 A-lines per B-scan (see Phantom_Experiments/inputs/Metadata.txt)
+# - Grid-snapped scatterers only (no random/radial positioning).
+# - Target density: 5–10 scatterers per pixel over the 500×500 grid.
+#
+# Usage: This file is loaded by Hydra and passed to the scatterer generation script.
+
+scatterers:
+  # ============================================================================
+  # PHANTOM GEOMETRY (500×500 pixel grid)
+  # ============================================================================
+
+  max_radius_mm: 5.0                         # Physical radius from center to edge [mm]
+                                             # - 2 * max_radius_mm / pixel_size_mm = 500 → matches phantom B-scan layout
+
+  pixel_size_mm: 0.020                       # Physical size of each pixel [mm]
+                                             # - Grid size = 2*5.0/0.02 = 500×500
+
+  # ============================================================================
+  # SCATTERER POSITIONING: GRID-SNAPPED ONLY
+  # ============================================================================
+
+  initialization_position_method: "grid"     # Scatterers placed on regular grid (snapped to pixel grid)
+
+  # ============================================================================
+  # SCATTERER VALUE ASSIGNMENT METHOD
+  # ============================================================================
+
+  initialization_values_method: "single"     # All scatterers same μ_t (override per experiment if needed)
+
+  # ============================================================================
+  # GRID DENSITY
+  # ============================================================================
+
+  num_scatterers: 1250000                    # Target total scatterers for grid mode
+                                             # For 5 per pixel use 1250000; for 10 per pixel use 2500000
+
+  # ============================================================================
+  # RANDOM VALUE PARAMETERS (unused when initialization_values_method="single")
+  # ============================================================================
+  random_values_min: 0.0                       # μ_t init lower bound [mm⁻¹]
+  random_values_max: 10.0                      # μ_t init upper bound [mm⁻¹]
+
+  # ============================================================================
+  # ALPHA (BACKSCATTERING FRACTION) INIT PARAMETERS
+  # ============================================================================
+  alpha_init_min: 1.0                       # α init lower bound (unitless)
+  alpha_init_max: 1.0                       # α init upper bound (unitless); log-uniform sampling
+
+  # ============================================================================
+  # GROUPED VALUE PARAMETERS (unused for grid + single value)
+  # ============================================================================
+  grouped_initial_values: [6.0]
+  grouped_values_boundaries: [1, 239]
+  grouped_refractive_indices: [1.00]
+
+  # ============================================================================
+  # SINGLE VALUE (used with initialization_values_method="single")
+  # ============================================================================
+  initialization_value: 1.0                   # μ_t [mm⁻¹] for all scatterers
+
+  # ============================================================================
+  # REFRACTIVE INDEX
+  # ============================================================================
+  refractive_index: 1.00
+
+  # ============================================================================
+  # VISUALIZATION
+  # ============================================================================
+  num_lines_radial: 500                      # Radial lines for visualization (matches 500 A-lines)
+
