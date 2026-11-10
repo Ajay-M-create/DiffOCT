@@ -5,6 +5,7 @@
   [![Python](https://img.shields.io/badge/Python-3.9-3776ab.svg?logo=python&logoColor=white)](https://www.python.org/)
   [![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-ee4c2c.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24113082.svg)](https://doi.org/10.5281/zenodo.24113082)
 
 </div>
 <br>
@@ -200,6 +201,28 @@ OCT phantom acquisitions are 16-bit TIFF stacks (512 B-scans per file, 500 × 50
 Clinical IV-OCT volumes follow the format described in the paper Methods (NIfTI-converted pullbacks in polar coordinates, two-stage μ + α optimization). Clinical data are not redistributed.
 
 Tissue μ is reported inside the `IntMask.mat` tissue mask. All-pixel averages include zeroed noise-floor pixels and underestimate tissue μ by about 30%.
+
+## Citation
+
+The code is archived on Zenodo. If you use it, please cite the archived release:
+
+```bibtex
+@software{manicka_diffoct_2026,
+  author    = {Manicka, Ajay and Kadry, Karim and Ruiz-Lopera, Sebasti{\'a}n and
+               Alsharqi, Maryam and Arji, Sanjana and Ruip{\'e}rez-Campillo, Samuel and
+               Uribe-Patarroyo, N{\'e}stor and Bouma, Brett E. and Nezami, Farhad and
+               Edelman, Elazer R.},
+  title     = {{DiffOCT: Differentiable Inverse Rendering Recovers Intrinsic Properties
+               from Intravascular OCT}},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.0.1},
+  doi       = {10.5281/zenodo.24114042},
+  url       = {https://doi.org/10.5281/zenodo.24114042}
+}
+```
+
+`10.5281/zenodo.24114042` identifies this exact version (v1.0.1); `10.5281/zenodo.24113082` always resolves to the latest release.
 
 ## License
 

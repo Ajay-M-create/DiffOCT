@@ -5,6 +5,7 @@ type: software
 license: MIT
 repository-code: "https://github.com/Ajay-M-create/DiffOCT"
 version: "1.0.1"
+doi: "10.5281/zenodo.24113082"
 date-released: "2026-11-10"
 authors:
   - family-names: Manicka
